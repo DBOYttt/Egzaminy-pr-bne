@@ -1,4 +1,5 @@
 # Dokumentacja projektu INF.03-01-21.06-SG - Czerwiec 2021
+![Uploading image.png…]()
 
 ## Struktura projektu
 
