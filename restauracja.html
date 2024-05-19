@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl_1.css">
+    <title>Restauracja Wszystkie Smaki</title>
+</head>
+<body>
+    <header>
+        <h1>Witamy w restauracji „Wszystkie Smaki”</h1>
+    </header>
+    <section id="panel_lewy">
+        <img src="menu.jpg" alt="Nasze Danie">
+    </section>
+    <section id="panel_prawy">
+        <h4>U nas Dobrze zjesz!</h4>
+        <ol>
+            <li>Obiady od 40zł</li>
+            <li>Przekąski od 10zł</li>
+            <li>Kolacje od 20zł</li>
+        </ol>
+    </section>
+    <section id="panel_dolny">
+        <h2>Zarezerwuj stolik on-line</h2>
+        <form action="rezerwacja.php" method="post">
+            <label for="data">Data:</label><br>
+            <input type="date" name="data" id="data" required pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-rrrr"> <br>
+            <label for="osoby">Ile osób?:</label><br>
+            <input type="number" name="osoby" id="osoby" required> <br>
+            <label for="telefon">Twój Numer telefony</label><br>
+            <input type="tel" name="telefon" id="telefon" required> <br>
+            <input type="checkbox" required>Zgadzam się na przetwarzanie moich danych osobowych <br>
+            <input type="reset"> <br>
+            <input type="submit" value="Zarezerwuj">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; Stronę Wykonał:<em>0987654321</em></p>
+    </footer>
+</body>
+</html>
