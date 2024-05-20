@@ -1,4 +1,6 @@
 # Dokumentacja projektu INF.03-01-21.06-SG - Czerwiec 2021
+![image](https://github.com/DBOYttt/Egzaminy-pr-bne/assets/65898012/df91c959-55a5-44da-b6ca-ccf1bc6a3fbc)
+
 
 ## Struktura projektu
 
