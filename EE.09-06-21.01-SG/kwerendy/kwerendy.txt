@@ -1,0 +1,4 @@
+kwerenda 1) - SELECT id, nr_rejsu, czas, kierunek, status_lotu FROM odloty GROUP BY czas DESC;
+kwerenda 2) - SELECT MIN(czas) FROM odloty WHERE czas BETWEEN '10:10:00' AND '10:19:59';
+kwerenda 3) - SELECT odloty.nr_rejsu, odloty.kierunek, samoloty.linie FROM odloty, samoloty WHERE odloty.samoloty_id = samoloty.id;
+kwerenda 3) - UPDATE przyloty SET status_lotu = "planowy" WHERE nr_rejsu = "LH9829";
