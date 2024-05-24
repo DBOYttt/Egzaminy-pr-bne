@@ -1,4 +1,5 @@
 # Projekt EE.09-06-21.01-SG
+![image](https://github.com/DBOYttt/Egzaminy-pr-bne/assets/65898012/f5dff387-2abd-43bb-9252-9fc8473838b2)
 
 ## Opis
 
