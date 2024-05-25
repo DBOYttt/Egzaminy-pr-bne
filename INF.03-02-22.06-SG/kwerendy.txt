@@ -1,0 +1,4 @@
+kwerenda 1) - SELECT marka, rocznik FROM samochody WHERE kolor = 'niebieski';
+kwerenda 2) - SELECT COUNT(*) AS 'liczba aut marki toyota oraz opel' FROM samochody WHERE (marka = "Toyota" or marka = "Opel") AND stan = "bardzo dobry";
+kwerenda 3) - CREATE USER jan IDENTIFIED BY "jankowalski1@";
+kwerenda 4) - GRANT SELECT, INSERT, UPDATE ON samochody TO jan;

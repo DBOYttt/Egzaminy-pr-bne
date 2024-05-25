@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Całodobowa Stacja paliw</h1>
+        </section>
+        <nav>
+            <a href="stacja.html"><img src="home.png" alt="home"></a>
+            <a href="obliczenia.html"><img src="znak.png" alt="znak"></a>
+            <a href="kwerendy.txt" download>Pobierz dokumenty</a>
+        </nav>
+    </header>
+    <main>
+        <section id="lewy">
+            <h2>Orientacyjny koszt paliwa</h2>
+            <form>
+                <a>Rodzaj  paliwa  (1-benzyna,  2-olej 
+                    napędowy):</a>
+                <br>
+                <input type="number" max="2" min="1">
+                <br>
+                <a>Ile litrów?</a>
+                <br>
+                <input type="number">
+                <br>
+                <input type="submit" title="OBLICZ" value="Oblicz">
+            </form>
+            <script>
+                document.querySelector("input[type=submit]").addEventListener("click", function() {
+                    var rodzaj = document.querySelector("input[type=number]").value;
+                    var litry = document.querySelectorAll("input[type=number]")[1].value;
+                    var cena = 0;
+                    if (rodzaj == 1) {
+                        cena = 4.00;
+                    } else {
+                        cena = 3.5;
+                    }
+                    alert("Koszt paliwa wynosi: " + (cena * litry).toFixed(2) + " zł");
+                });
+            </script>
+        </section>
+        <section id="prawy">
+            <img src="samochod.png" alt="samochod">            
+        </section>
+    </main>
+    <footer>
+        <p>Stronę wykonał: DBOYttt</p>
+    </footer>
+
+</body>
+</html>
