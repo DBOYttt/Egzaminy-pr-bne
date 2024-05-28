@@ -25,7 +25,6 @@
             </form>
 
             <?php
-                // Skrypt #1
                 $conn = new mysqli("localhost","root","","psy");
 
                 function hashPassword($password) {
