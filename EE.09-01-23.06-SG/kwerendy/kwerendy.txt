@@ -1,0 +1,29 @@
+1) - CREATE TABLE `urzytkownicy` (
+  `id` int(11) NOT NULL,
+  `login` varchar(50) NOT NULL,
+  `haslo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indeksy dla zrzutów tabel
+--
+
+--
+-- Indeksy dla tabeli `urzytkownicy`
+--
+ALTER TABLE `urzytkownicy`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `urzytkownicy`
+--
+ALTER TABLE `urzytkownicy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+2) - INSERT INTO `urzytkownicy` (`id`, `login`, `haslo`) VALUES (NULL, 'Grzegorz', 'g');
+3) - SELECT login FROM uzytkownicy;
+4) - SELECT id, haslo FROM uzytkownicy WHERE haslo LIKE '4%';
