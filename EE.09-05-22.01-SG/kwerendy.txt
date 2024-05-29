@@ -1,0 +1,4 @@
+1) - SELECT haslo FROM uzytkownicy WHERE login = 'Justyna';
+2) - SELECT COUNT(*) AS 'liczba wierszy' FROM dane;
+3) - SELECT uzytkownicy.login, dane.rok_urodz, dane.przyjaciol, dane.hobby, dane.zdjecie FROM uzytkownicy, dane WHERE (dane.id = uzytkownicy.id) AND login = 'Justyna';
+4)  - ALTER TABLE `dane` ADD `Stanowisko` VARCHAR(30) NOT NULL AFTER `zdjecie`;
