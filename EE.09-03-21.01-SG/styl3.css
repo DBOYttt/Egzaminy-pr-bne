@@ -1,0 +1,48 @@
+header{
+    background-color: #FF7F50;
+    height: 100px;
+    display: flex;
+}
+header > aside {
+    width: 25%;
+}
+header > article {
+    width: 75%;
+    font-size: 130%;
+}
+main > article {
+    background-color: #FF7F50;
+    padding: 70px;
+    width: 100%;
+    clear: both;
+}
+#lewy {
+    width: 40%;
+    height: 400px;
+    float: left;
+    text-align: center;
+}
+#prawy {
+    width: 60%;
+    height: 400px;
+    float: left;
+    text-align: right;
+}
+footer {
+    clear: both;
+    background-color: #FF7F50;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 80;
+}
+table {
+    color: white;
+    text-align: center;
+    width: 80%;
+    border: 1px dotted white;
+}
+td:hover, th:hover {
+    background-color: #d3d3d3;
+    color: black;
+}
