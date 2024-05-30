@@ -1,0 +1,10 @@
+1) - SELECT id, nazwa, wystepowanie FROM ryby WHERE styl_zycia = 2;
+2) - SELECT akwen, wojewodztwo FROM lowisko WHERE rodzaj = 2 OR rodzaj = 3;
+3) - SELECT ryby.nazwa FROM ryby WHERE ryby.id NOT IN (SELECT okres_ochronny.Ryby_id FROM okres_ochronny);
+4) - CREATE TABLE wedkarze (
+    id INT NOT NULL AUTO_INCREMENT,
+    imie VARCHAR(255),
+    nazwisko VARCHAR(255),
+    punkty INT(10),
+    PRIMARY KEY (id)
+    );
