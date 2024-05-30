@@ -1,0 +1,4 @@
+1) - SELECT nazwa, cena FROM towary LIMIT 4;
+2) - SELECT cena FROM towary WHERE nazwa = 'Ekierka';
+3) - UPDATE dostawcy SET nazwa = 'Artykuly szkolne' WHERE id = 2;
+4) - SELECT COUNT(promocja) AS 'towary objęte promocją' FROM towary WHERE promocja = 1 UNION ALL SELECT COUNT(promocja) AS 'towary nie objete promocją' FROM towary WHERE promocja = 0;
