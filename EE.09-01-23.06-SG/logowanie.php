@@ -79,7 +79,7 @@
         </div>
 
         <footer>
-            Stronę wykonał: DBOYttt</a>
+            <p>Stronę wykonał: DBOYttt</p>
         </footer>
     </body>
 </html>

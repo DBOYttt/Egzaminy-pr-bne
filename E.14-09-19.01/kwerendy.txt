@@ -1,0 +1,4 @@
+1) - SELECT gatunek, wystepowanie FROM zwierzeta WHERE zwierzeta.Gromady_id = 1;
+2) - SELECT zwierzeta.id, zwierzeta.gatunek, gromady.nazwa FROM zwierzeta, gromady WHERE zwierzeta.Gromady_id = gromady.id;
+3) - SELECT COUNT(*) AS 'liczba rekordów dla ssak' FROM zwierzeta WHERE zwierzeta.Gromady_id = 5;
+4) - CREATE USER 'KatarzynaNowak' IDENTIFIED BY 'K4tNow';

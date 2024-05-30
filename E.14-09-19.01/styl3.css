@@ -1,0 +1,36 @@
+html {
+    font-family: Garamond;
+}
+header {
+    padding: 40px;
+}
+footer { 
+    clear: both;
+    padding: 30px;
+}
+header, footer {
+    background-color: rosybrown;
+    color: white;
+    text-align: center;
+}
+main > div {
+    background-color: darksalmon;
+    text-align: center;
+    padding: 10px;
+}
+main > section {
+    height: 300px;
+    background-color: lightsalmon;
+    display: flex;
+}
+main > aside {
+   width: 30%;
+}
+main > section > article {
+    width: 40%;
+}
+
+ol {
+    border: 2px solid rgb(205, 92, 92);
+    font-size: 150%;
+}
