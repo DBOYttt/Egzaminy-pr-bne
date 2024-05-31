@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+    <style>
+        .right-block {
+            background-color: maroon;
+            color: black;
+            font-size: 100%;
+            border: none;
+        }
+        .right-block img {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <aside>
+            <h1>Konfigurator stylu</h1>
+            
+            <form>
+                <p>Podaj kolor tła</p>
+                <input type="button" value="Indygo" onclick="changeBackgroundColor('Indygo')">
+                <input type="button" value="SteelBlue" onclick="changeBackgroundColor('SteelBlue')">
+                <input type="button" value="Olive" onclick="changeBackgroundColor('Olive')">
+                <p>Podaj Kolor czcionki</p>
+                <select name="kolory" id="kolory" onchange="changeFontColor(this.value)">
+                    <option value="White">White</option>
+                    <option value="Tan">Tan</option>
+                    <option value="Bisque">Bisque</option>
+                    <option value="Plum">Plum</option>
+                </select>
+                <p>Podaj rozmiar czcionki w procentach, np.200%</p>
+                <input type="text" id="font-size-input" value="100%" onblur="changeFontSize(this.value)">
+                <p>Czy rysunek ma mieć ramkę?</p>
+                <input type="checkbox" id="frame-checkbox" onchange="toggleImageFrame()" checked>
+                <p>Wybierz typ punktora listy:</p>
+                <input type="radio" name="punktory" id="dysk" checked onclick="changeListMarker('disc')">
+                <label for="dysk">Dysk</label>
+                <input type="radio" name="punktory" id="kwadrat" onclick="changeListMarker('square')">
+                <label for="kwadrat">Kwadrat</label>
+                <input type="radio" name="punktory" id="okrag" onclick="changeListMarker('circle')">
+                <label for="okrag">Okrąg</label>
+            </form>
+        </aside>
+        <article class="right-block">
+            <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+            <ul>
+                <li>element 1</li>
+                <li>element 2</li>
+                <li>element 3</li>
+            </ul>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+            </p>
+            
+        </article>
+    </main>
+    <footer>
+        <p>Strone Wykonał: DBOYttt</p>
+    </footer>
+
+    <script>
+        function changeBackgroundColor(color) {
+            var rightBlock = document.querySelector('.right-block');
+            rightBlock.style.backgroundColor = color;
+        }
+
+        function changeFontColor(color) {
+            var rightBlock = document.querySelector('.right-block');
+            rightBlock.style.color = color;
+        }
+
+        function changeFontSize(size) {
+            var rightBlock = document.querySelector('.right-block');
+            rightBlock.style.fontSize = size;
+        }
+
+        function toggleImageFrame() {
+            var rightBlock = document.querySelector('.right-block');
+            var image = rightBlock.querySelector('img');
+            if (image) {
+                if (document.getElementById('frame-checkbox').checked) {
+                    image.style.border = '1px solid black';
+                } else {
+                    image.style.border = 'none';
+                }
+            }
+        }
+
+        function changeListMarker(markerType) {
+            var rightBlock = document.querySelector('.right-block');
+            var listItems = rightBlock.querySelectorAll('li');
+            listItems.forEach(function(item) {
+                item.style.listStyleType = markerType;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    font-family: Georgia;
+}
+
+main {
+    height: 600px;
+    background-color: maroon;
+    display: flex;
+}
+
+main > aside {
+    color: white;
+    width: 30%;
+}
+
+main > article {    
+    width: 70%;
+}
+
+footer {
+    background-color: dimgray;
+    color: white;
+}
+
+main > section > img,
+main > article > ul {
+    width: 100%;
+}
+
+p { 
+    padding: 10px;
+}
+
+img { 
+    padding: 10px;
+    border: 1px solid white;
+}
+
