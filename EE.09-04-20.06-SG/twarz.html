@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi Kosmetyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <main>
+        <section>
+            <aside id="lewy-gora">
+                <h2>W ofercie</h2>
+                <ul>
+                    <li><a href="twarz.html">Zabieg na Twarz</a>
+                        <ul>
+                            <li>Piling</li>
+                            <li>mask</li>
+                            <li>Regulacja Brwi</li>
+                        </ul>
+                    </li>
+                    <li>Masarz</li>
+                    <li>diety oczyszczające</li>
+                </ul>
+                <a href="index.html">Do Strony głównej</a>
+            </aside>
+            <aside id="lewy-dolny">
+                <img src="obraz1.jpg" alt="Kosmetyczka">
+            </aside>
+        </section>
+        <section>
+            <aside id="prawy-gora">
+                <h1>Salon Kosmetyczny</h1>
+            </aside>
+            <aside id="prawy-dolny">
+                <h2>Sprawdź cenę swojej wizyty</h2>
+                <form>
+                    <input type="checkbox">
+                    <label for="Piling">Piling</label>
+                    <input type="checkbox">
+                    <label for="maska">maska</label>
+                    <input type="checkbox">
+                    <label for="masaż">masaż twarzy</label>
+                    <input type="checkbox">
+                    <label for="relgulacja">Regulacja brwi</label>
+                    <input type="submit" value="Sprawdź cene">
+                </form>
+                <script>
+                    document.querySelector("input[type=submit]").addEventListener('click', function() { 
+                        var Piling = document.querySelectorAll('input[type=checkbox]')[0].checked;
+                        var maska = document.querySelectorAll('input[type=checkbox]')[1].checked;
+                        var masaz = document.querySelectorAll('input[type=checkbox]')[2].checked;
+                        var brwi = document.querySelectorAll('input[type=checkbox]')[3].checked;
+                        var value = 0;
+                        if(Piling) {
+                            value += 45;
+                        }
+                        if (maska) {
+                            value += 30;
+                        }
+                        if (masaz){
+                            value += 20;
+                        }
+                        if (brwi) {
+                            value += 5;
+                        }
+                        if (value === 0) {
+                            alert('Proszę wybrać usługę');
+                        } else {
+                            alert('Usługa kosztuje ' + value + ' zł');
+                        }
+                    })
+                </script>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <P>Autor: DBOYttt</P>
+    </footer>
+</body>
+</html>
