@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h1>Sieci komputerowe</h1>
+    </header>
+    <main>
+        <aside>
+            <h2>Aktualizacja i zamówienia materiałów</h2>
+            <p>Do wewnętrznego użytku firmy</p>
+            <img src="obraz.jpg" alt="siec komputerowa">
+        </aside>
+        <article>
+            <table>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Jednostka</th>
+                    <th>Dostępna ilość</th>
+                    <th>Aktualizacja</th>
+                    <th>Zamównienie</th>
+                </tr>
+                <tr>
+                    <td>Skrętka U/UTP drut</td>
+                    <td>Metr</td>
+                    <td>20</td>
+                    <td><input type="button" name="skretka" value="Aktualizuj" onclick="updateQuantity(this)"></td>
+                    <td><input type="button" name="skretka" value="Zamów" onclick="placeOrder(this)"></td>
+                </tr>
+                <tr>
+                    <td>Skrętka U/UTP linijka</td>
+                    <td>Metr</td>
+                    <td>2</td>
+                    <td><input type="button" name="skretka" value="Aktualizuj" onclick="updateQuantity(this)"></td>
+                    <td><input type="button" name="skretka" value="Zamów" onclick="placeOrder(this)"></td>
+                </tr>
+                <tr>
+                    <td>Wtyki 8P8C</td>
+                    <td>sztuki</td>
+                    <td>10</td>
+                    <td><input type="button" name="skretka" value="Aktualizuj" onclick="updateQuantity(this)"></td>
+                    <td><input type="button" name="skretka" value="Zamów" onclick="placeOrder(this)"></td>
+                </tr>
+                <tr>
+                    <td>Moduły Keystone</td>
+                    <td>sztuki</td>
+                    <td>30</td>
+                    <td><input type="button" name="skretka" value="Aktualizuj" onclick="updateQuantity(this)"></td>
+                    <td><input type="button" name="skretka" value="Zamów" onclick="placeOrder(this)"></td>
+                </tr>
+            </table>
+        </article>
+    </main>
+    <footer>
+        <a href="http://sieci.pl/">Nasza strona internetowa</a>
+        <p>Strone przygotował: DBOYttt</p>
+    </footer>
+</body>
+<script>
+
+        function highlightShortage() {
+            var rows = document.querySelectorAll('table tr');
+            for (var i = 1; i < rows.length; i++) {
+                var quantity = parseInt(rows[i].querySelector('td:nth-child(3)').textContent);
+                if (quantity === 0) {
+                    rows[i].style.backgroundColor = 'red';
+                } else if (quantity >= 1 && quantity <= 5) {
+                    rows[i].style.backgroundColor = 'yellow';
+                } else {
+                    rows[i].style.backgroundColor = 'Honeydew';
+                }
+            }
+        }
+
+        highlightShortage();
+
+            function updateQuantity(button) {
+                var row = button.parentNode.parentNode;
+                var productName = row.querySelector('td:nth-child(1)').textContent;
+                var newQuantity = prompt('Podaj nową ilość:');
+                row.querySelector('td:nth-child(3)').textContent = newQuantity;
+                highlightShortage();
+            }
+
+            function placeOrder(button) {
+                var row = button.parentNode.parentNode;
+                var orderId = generateOrderId();
+                var productName = row.querySelector('td:nth-child(1)').textContent;
+                var rows = document.querySelectorAll('table tr');
+                for (var i = 1; i < rows.length; i++) {
+                    var quantity = parseInt(rows[i].querySelector('td:nth-child(3)').textContent);
+                    if (quantity === 0) {
+                        alert('0 produktów w magazynie');
+                        break;
+                    } else if (quantity >= 1 && quantity <= 5) {
+                        alert('Ostatnie Zamówienie nr: ' + orderId + ' Produkt: ' + productName);
+                        break;
+                    } else {
+                        alert('Zamówienie nr: ' + orderId + ' Produkt: ' + productName);
+                        break;
+                    }
+                }
+                
+            }
+
+            function generateOrderId() {
+                return Math.floor(Math.random() * 1000) + 1;
+            }
+
+
+</script>
+</html>

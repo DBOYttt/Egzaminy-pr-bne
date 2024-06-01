@@ -1,0 +1,50 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+header {
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+main {
+    height: 500px;
+    display: flex;
+}
+main > aside {
+    width: 30%;
+}
+main > article {
+    width: 70%;
+    background-color: honeydew;
+    padding-top: 100px;
+}
+footer {
+    background-color: darkgreen;
+    color: white;
+    padding: 3px;
+}
+table tr, td {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+}
+table th, td {
+    padding: 20px 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+input[type="button"] {
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+input[type="button"]:hover {
+    background-color: honeydew;
+    color: darkgreen;
+}
+table {
+    margin: auto;
+    width: 95%;
+}
