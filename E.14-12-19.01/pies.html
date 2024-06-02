@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masze zdjęcia</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <header>
+        <h2>Nasze Psy</h2>
+    </header>
+    <main>
+        <aside>
+            <nav>
+                <h1>Wybierz</h1>
+                <ul>
+                    <li><a href="pies.html">Psy</a></li>
+                    <li><a href="kot.html">Koty</a></li>
+                    <li><a>inne zdjęcia...</a></li>
+                </ul>
+                <h5><a href="index.html">Do strony Głównej</a></h5>
+            </nav>
+        </aside>
+        <article>
+            <section>
+                <h2>Kliknij na zdjęcie</h2>
+                <img src="pies1.jpg" alt="pies" onclick="clickImage()" onmouseover="hoverImage()" onmouseout="leaveImage()">
+                <img src="pies2.jpg" alt="pies" onclick="clickImage()" onmouseover="hoverImage()" onmouseout="leaveImage()">
+                <img src="pies3.jpg" alt="pies"onclick="clickImage()" onmouseover="hoverImage()" onmouseout="leaveImage()">
+            </section>
+            <section>
+
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>Strona stworzona przez: DBOYttt</p>
+    </footer>
+
+</body>
+<script>
+    var flaga = true;    
+
+        function clickImage() {
+            if (flaga) {
+                var img = event.target;
+                img.style.transform = "scaleX(-1)";
+                flaga = false;
+                var article = document.querySelector("main > article:last-child");
+                article.appendChild(img);
+            } else {
+                var img = event.target;
+                img.style.transform = "scaleX(1)";
+                flaga = true;
+                var article = document.querySelector("main > article:last-child");
+                article.appendChild(img);
+            }
+        }
+
+    function hoverImage() {
+        var img = event.target;
+        img.style.transform = "scaleX(-1)";
+    }
+    function leaveImage() {
+        if (flaga) {
+            var img = event.target;
+            img.style.transform = "scaleX(-1)";
+            flaga = false;
+        } else {
+            var img = event.target;
+            img.style.transform = "scaleX(1)";
+            flaga = true;
+        }
+    }
+</script>
+</html>
