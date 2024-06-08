@@ -53,7 +53,7 @@
         <h3>Hurtownia działa od poniedziałku do soboty w godzinach  
         7<sup>00</sup>-16<sup>00</sup></h3>
         <a href="mailto:bok@hurtownia.pl">Napisz do nas</a>
-        <p>Partnerzy: </p>
+        Partnerzy:
         <a href="http://intel.pl">intel</a><a href="http://amd.pl">AMD</a>
         <p>Strone Wykonał: DBOYttt</p>
     </footer>
