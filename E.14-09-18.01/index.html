@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Programowania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Projekt strony internetowej szkoły
+            ponadgimnazjalnej</h1>
+    </header>
+    <main>
+        <aside>
+            <table>
+                <tr>
+                    <th>Treść zapytania</th>
+                    <th style="width: 405px;">Zrzut ekranu</th>
+                </tr>
+                <tr>
+                    <td>INSERT INTO klasa VALUES (5, '3a');</td>
+                    <td><img src="kwerenda1.jpg" alt="kwerenda1"></td>
+                </tr>
+                <tr>
+                    <td>SELECT nazwa, AVG(srednia_ocen) AS srednia FROM uczen JOIN klasa ON uczen.id_klasy=klasa.id GROUP BY nazwa;</td>
+                    <td><img src="kwerenda2.jpg" alt="kwerenda2"></td>
+                </tr>
+                <tr>
+                    <td>CREATE USER 'Dyrektor'@'localhost' IDENTIFIED BY 'dyr_123</td>
+                    <td><img src="nowy_uzytkownik.jpg" alt="nowy_uzytkownik"></td>
+                </tr>
+                <tr>
+                    <td>GRANT ALL PRIVILEGES ON szkola.* TO 'Dyrektor'@'localhost';</td>
+                    <td><img src="uprawnienia.jpg" alt="uprawnienia"></td>
+                </tr>
+            </table>
+        </aside>
+        <article>
+            <h2>Do pobrania</h2>
+            <ol>
+                <li><a href="zapytania.txt" target="_blank" rel="noopener noreferrer">zapytania SQL</a></li>
+                <li><a href="szkola.sql" target="_blank" rel="noopener noreferrer">baza danych</a></li>
+            </ol>
+            <hr>
+            <h3>Wyznaczanie najniższej średniej</h3>
+            <ol>
+                <li><a>Polak</a><input type="number" name="Polak" id="Polak"><br></li>
+                <li><a>Nowak</a><input type="number" name="Nowak" id="Nowak"><br></li>
+                <li><a>Rysik</a><input type="number" name="Rysik" id="Rysik"><br></li>
+            </ol>
+            <input type="button" value="Wyznacz">
+            <h3>Najniższa średnia: </h3>
+        </article>
+    </main>
+    <footer><p>Strone Wykonał: DBOYttt</p></footer>
+    <script>
+        document.querySelector('input[type=button]').addEventListener('click', function(){
+            let minNumber = Infinity;
+            for(let i = 0; i < 3; i++){
+                let input = document.querySelectorAll('input[type=number]')[i];
+                let value = parseInt(input.value);
+                if(value < minNumber){
+                    minNumber = value;
+                }
+            }
+            document.querySelectorAll('h3')[1].innerHTML = `Najniższa średnia:${minNumber}`;
+        } )
+    </script>
+</body>
+</html>
